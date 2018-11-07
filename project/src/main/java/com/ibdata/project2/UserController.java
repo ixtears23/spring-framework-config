@@ -34,7 +34,7 @@ public class UserController {
 	 */
 	@RequestMapping(value = "/User.do", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) throws Exception {
-		logger.info("Welcome home! The client locale is {}.", locale);
+		logger.debug("Welcome home! The client locale is {}.", locale);
 		
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
@@ -42,6 +42,8 @@ public class UserController {
 		String formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("serverTime", formattedDate );
+		
+		System.out.println("test");
 		
 //		httpRequest.textRequest();
 		

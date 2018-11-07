@@ -7,12 +7,16 @@
 	</configSuffixes>
 	<enableImports><![CDATA[true]]></enableImports>
 	<configs>
-		<config>src/main/resources/config/servlet/servlet-context.xml</config>
 		<config>src/main/resources/config/root/datasource-buzzy-context.xml</config>
 		<config>src/main/resources/config/root/datasource-dori-context.xml</config>
+		<config>src/main/resources/config/servlet/dispatcher-servlet.xml</config>
 	</configs>
 	<autoconfigs>
+		<config>src/main/resources/config/root/transaction-dori-context.xml</config>
 		<config>src/main/resources/config/root/properties-context.xml</config>
+		<config>src/main/resources/config/bean/setter-based-context.xml</config>
+		<config>src/main/resources/config/bean/constructor-based-context.xml</config>
+		<config>src/main/webapp/config/bean-context.xml</config>
 	</autoconfigs>
 	<configSets>
 	</configSets>
