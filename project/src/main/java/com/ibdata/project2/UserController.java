@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.ibdata.project.custom.User;
 import com.ibdata.project2.service.UserCopyService;
 import com.ibdata.project2.vo.UserCopy;
 
@@ -24,6 +23,7 @@ import com.ibdata.project2.vo.UserCopy;
 @Controller
 public class UserController {
 	
+//	private static final Logger logger = LogManager.getLogger(UserController.class);
 	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 	
 	@Autowired
