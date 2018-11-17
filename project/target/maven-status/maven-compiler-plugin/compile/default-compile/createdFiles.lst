@@ -1,0 +1,15 @@
+com\ibdata\project\mapper\UserDAO.class
+com\ibdata\project2\service\UserCopyServiceImpl.class
+com\ibdata\project\custom\User.class
+com\ibdata\project\service\UserService.class
+com\ibdata\myapp\bean\ClientService.class
+com\ibdata\project2\vo\UserCopy.class
+com\ibdata\project\service\UserServiceImpl.class
+com\ibdata\project2\config\SpringBeanConfig.class
+com\ibdata\project\mapper\UserDAOImpl.class
+com\ibdata\project\service\HttpRequest.class
+com\ibdata\project2\mapper\UserCopyMapper.class
+com\ibdata\project\HomeController.class
+com\ibdata\myapp\bean\ExampleBean.class
+com\ibdata\project2\UserController.class
+com\ibdata\project2\service\UserCopyService.class
