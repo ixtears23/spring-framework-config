@@ -9,14 +9,6 @@
 						http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
 						http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-
-<!-- 	<tx:advice id="txAdvice.buzzy" transaction-manager="txManager.buzzy"> -->
-<!-- 		<tx:attributes> -->
-<!-- 			<tx:method name="select*" read-only="true"/> -->
-<!-- 			<tx:method name="insert*" rollback-for="Throwable"/> -->
-<!-- 		</tx:attributes> -->
-<!-- 	</tx:advice> -->
-	
 	<tx:advice id="txAdvice.dori" transaction-manager="txManager.dori">
 		<tx:attributes>
 			<tx:method name="select*" read-only="true"/>
@@ -24,19 +16,10 @@
 		</tx:attributes>
 	</tx:advice>
 	
-<!-- 	<aop:config> -->
-<!-- 		<aop:pointcut id="userServiceCopyOperation" expression="execution(* com.ibdata.project.service.*.*(..))"/> -->
-<!-- 		<aop:advisor advice-ref="txAdvice.buzzy" pointcut-ref="userServiceCopyOperation"/> -->
-<!-- 	</aop:config> -->
-	
 	<aop:config>
-		<aop:pointcut id="userServiceOperation" expression="execution(* com.ibdata.project2.service.*Service.insert*(..))"/>
+		<aop:pointcut id="userServiceOperation" expression="execution(* com.ibdata.project2.service.*Service.*(..))"/>
 		<aop:advisor advice-ref="txAdvice.dori" pointcut-ref="userServiceOperation"/>
 	</aop:config>
-	
-<!-- 	<bean id="txManager.buzzy" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"> -->
-<!-- 		<property name="dataSource" ref="datasource.buzzy"/> -->
-<!-- 	</bean> -->
 	
 	<bean id="txManager.dori" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="datasource.dori"/>

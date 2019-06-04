@@ -16,10 +16,6 @@
 		<property name="password" value="${mysql.dori.password}"/>
 	</bean>
 	
-<!--     <bean id="mysql.jndi" class="org.springframework.jndi.JndiObjectFactoryBean"> -->
-<!--          <property name="jndiName" value="${jndi.mysql}" /> -->
-<!--      </bean> -->
-			
 	<bean id="sqlSessionFactory.dori" class="org.mybatis.spring.SqlSessionFactoryBean">
 	  <property name="dataSource" ref="datasource.dori" />
 	  <property name="mapperLocations">

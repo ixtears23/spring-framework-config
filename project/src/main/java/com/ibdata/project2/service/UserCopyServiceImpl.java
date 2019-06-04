@@ -18,7 +18,6 @@ public class UserCopyServiceImpl implements UserCopyService {
 	public List<UserCopy> selectUserAll() throws Exception {
 		
 		List<UserCopy> list = userCopyMapper.selectUserAll();
-		
 		return list;
 	}
 
@@ -33,8 +32,8 @@ public class UserCopyServiceImpl implements UserCopyService {
 		
 		
 		userCopyMapper.insertUser(userCopy);
-		userCopy.setId(null);
-		userCopyMapper.insertUser(userCopy);
+//		userCopy.setId(null);
+//		userCopyMapper.insertUser(userCopy);
 	}
 
 	@Override

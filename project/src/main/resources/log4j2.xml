@@ -6,15 +6,7 @@
     </Console>
   </Appenders>
   <Loggers>
-    <Logger name="com.ibdata.myapp" level="DEBUG" additivity="false">
-      <AppenderRef ref="Console"/>
-    </Logger>
-    
-    <Logger name="com.ibdata.project" level="DEBUG" additivity="false">
-      <AppenderRef ref="Console"/>
-    </Logger>
-    
-    <Logger name="com.ibdata.project2" level="DEBUG" additivity="false">
+    <Logger name="com.ibdata" level="DEBUG" additivity="false">
       <AppenderRef ref="Console"/>
     </Logger>
     
@@ -26,6 +18,10 @@
       <AppenderRef ref="Console"/>
     </Logger>
     
+    <Logger name="org.springframework.jdbc" level="DEBUG" additivity="false">
+      <AppenderRef ref="Console"/>
+    </Logger>
+    
     <Logger name="org.springframework.context" level="DEBUG" additivity="false">
       <AppenderRef ref="Console"/>
     </Logger>
@@ -33,6 +29,10 @@
     <Logger name="org.springframework.web" level="DEBUG" additivity="false">
       <AppenderRef ref="Console"/>
     </Logger>
+    
+	<logger name="log4jdbc.log4j2" level="error" additivity="false">
+	  <AppenderRef ref="Console"/>
+	</logger>
     
     <Root level="error">
       <AppenderRef ref="Console"/>

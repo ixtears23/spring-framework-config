@@ -26,14 +26,8 @@ public class HomeController {
 	private static final Logger logger = LogManager.getLogger(HomeController.class);
 	
 	@Autowired
-	private HttpRequest httpRequest;
-	
-	@Autowired
 	private UserService userService;
 	
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
 	@RequestMapping(value = "/home.do", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) throws Exception {
 		logger.info("Welcome home! The client locale is {}.", locale);
@@ -44,8 +38,6 @@ public class HomeController {
 		String formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("serverTime", formattedDate );
-		
-//		httpRequest.textRequest();
 		
 		User user = new User();
 		user.setId("001");
