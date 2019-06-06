@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <USER id='1' name='one' emain='a' />
+    <USER id='2' name='two' emain='b' />
+    <USER id='3' name='three' emain='c' />
+    <USER id='4' name='four' emain='d' />
+</dataset>
