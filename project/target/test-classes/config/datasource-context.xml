@@ -25,10 +25,19 @@
 	  </property>
 	</bean>
 	
+	<bean id="transactionManager"
+	    class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+	  <property name="dataSource" ref="datasource" />
+	</bean>
+	
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage" value="com.ibdata.project2.mapper"/>
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory.dori"/>
 	</bean>
 	
+   <bean id="dataSourceTest"
+    class="org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy">
+    <constructor-arg ref="datasource" />
+   </bean>
 	
 </beans>

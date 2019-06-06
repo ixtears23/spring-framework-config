@@ -11,6 +11,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
 import org.springframework.test.context.support.DirtiesContextTestExecutionListener;
 import org.springframework.test.context.transaction.TransactionalTestExecutionListener;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.github.springtestdbunit.DbUnitTestExecutionListener;
 import com.github.springtestdbunit.annotation.DatabaseSetup;
@@ -22,8 +23,8 @@ import com.github.springtestdbunit.annotation.ExpectedDatabase;
 @TestExecutionListeners({ 
 	DependencyInjectionTestExecutionListener.class,
         DirtiesContextTestExecutionListener.class,
-        TransactionalTestExecutionListener.class
-//        DbUnitTestExecutionListener.class 
+        TransactionalTestExecutionListener.class,
+        DbUnitTestExecutionListener.class 
         })
 @DbUnitConfiguration(databaseConnection={"datasource"})	// 기본적으로 dataSource 이름을 찾는다. camel표기법인데 난 전부 소문자로 bean 이름을 등록해서 해당 설정 추가함.
 public class UserMapperTest {
@@ -31,8 +32,9 @@ public class UserMapperTest {
 	@Test
 //	@DatabaseSetup
 //	@ExpectedDatabase
-	@DatabaseSetup("classpath:com/ibdata/project2/mapper/userCopy.xml")
-	@ExpectedDatabase("classpath:com/ibdata/project2/mapper/userCopy.xml")
+	@DatabaseSetup(connection="datasource",  value="classpath:com/ibdata/project2/mapper/userCopy.xml")
+//	@ExpectedDatabase("classpath:com/ibdata/project2/mapper/userCopy.xml")
+	@Transactional
 	public void dataTest() {
 		
 	}
