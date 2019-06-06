@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataset>
-    <USER id='1' name='one' emain='a' />
-    <USER id='2' name='two' emain='b' />
-    <USER id='3' name='three' emain='c' />
-    <USER id='4' name='four' emain='d' />
+<!--     <USER id='1' name='one' emain='a' /> -->
+<!--     <USER id='2' name='two' emain='b' /> -->
+<!--     <USER id='3' name='three' emain='c' /> -->
+<!--     <USER id='4' name='four' emain='d' /> -->
+    <table name="USER">
+
+        <column>id</column>
+
+        <column>name</column>
+
+        <column>emain</column>
+
+        <row>
+
+            <value>1</value>
+
+            <value>one</value>
+
+            <value>a</value>
+
+        </row>
+
+        <row>
+
+            <value>2</value>
+
+            <value>two</value>
+
+            <value>b</value>
+
+        </row>
+
+    </table>
 </dataset>

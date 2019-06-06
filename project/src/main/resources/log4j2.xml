@@ -30,6 +30,10 @@
       <AppenderRef ref="Console"/>
     </Logger>
     
+    <Logger name="org.dbunit.dataset" level="DEBUG" additivity="false">
+      <AppenderRef ref="Console"/>
+    </Logger>
+    
 	<logger name="log4jdbc.log4j2" level="error" additivity="false">
 	  <AppenderRef ref="Console"/>
 	</logger>
