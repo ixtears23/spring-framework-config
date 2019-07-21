@@ -99,4 +99,18 @@ public class UserController {
 		return "home";
 	}
 	
+	
+	@RequestMapping(value = "/insertMaria.do", method = RequestMethod.GET)
+	public String insertMaria(
+			@RequestParam String id,
+			@RequestParam String name,
+			@RequestParam String age) throws Exception {
+		UserCopy userCopy = new UserCopy();
+		userCopy.setId(id);;
+		userCopy.setName(name);
+		userCopy.setAge(age);
+		userCopyService.insertMaria(userCopy);
+		return "home";
+	}
+	
 }

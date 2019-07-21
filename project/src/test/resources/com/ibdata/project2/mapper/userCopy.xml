@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataset>
-<!--     <USER id='1' name='one' emain='a' /> -->
-<!--     <USER id='2' name='two' emain='b' /> -->
-<!--     <USER id='3' name='three' emain='c' /> -->
-<!--     <USER id='4' name='four' emain='d' /> -->
-    <table name="USER">
+    <USER_COPY id='1' name='one' emain='a' />
+    <USER_COPY id='2' name='two' emain='b' />
+    <USER_COPY id='3' name='three' emain='c' />
+    <USER_COPY id='4' name='four' emain='d' />
+<!--     <table name="USER_COPY"> -->
 
-        <column>id</column>
+<!--         <column>id</column> -->
 
-        <column>name</column>
+<!--         <column>name</column> -->
 
-        <column>emain</column>
+<!--         <column>emain</column> -->
 
-        <row>
+<!--         <row> -->
 
-            <value>1</value>
+<!--             <value>1</value> -->
 
-            <value>one</value>
+<!--             <value>one</value> -->
 
-            <value>a</value>
+<!--             <value>a</value> -->
 
-        </row>
+<!--         </row> -->
 
-        <row>
+<!--         <row> -->
 
-            <value>2</value>
+<!--             <value>2</value> -->
 
-            <value>two</value>
+<!--             <value>two</value> -->
 
-            <value>b</value>
+<!--             <value>b</value> -->
 
-        </row>
+<!--         </row> -->
 
-    </table>
+<!--     </table> -->
 </dataset>

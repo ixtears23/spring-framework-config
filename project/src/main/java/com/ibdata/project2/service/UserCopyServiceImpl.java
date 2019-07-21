@@ -7,12 +7,16 @@ import org.springframework.stereotype.Service;
 
 import com.ibdata.project2.vo.UserCopy;
 import com.ibdata.project2.mapper.UserCopyMapper;
+import com.ibdata.project2.mapper.UserCopyMapperMaria;
 
 @Service(value="UserCopyService")
 public class UserCopyServiceImpl implements UserCopyService {
 	
 	@Autowired
 	private UserCopyMapper userCopyMapper;
+	
+	@Autowired
+	private UserCopyMapperMaria userCopyMapperMaria;
 	
 	@Override
 	public List<UserCopy> selectUserAll() throws Exception {
@@ -42,6 +46,11 @@ public class UserCopyServiceImpl implements UserCopyService {
 		if(1 == 1) {
 			throw new Exception();
 		}
+	}
+
+	@Override
+	public void insertMaria(UserCopy userCopy) throws Exception {
+		userCopyMapperMaria.insertUser(userCopy);
 	}
 
 }

@@ -1,15 +1,16 @@
-package com.ibdata.project2.service;
+package com.ibdata.project2.mapper;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.ibdata.project2.vo.UserCopy;
 
-public interface UserCopyService {
-	
+@Component("com.ibdata.project2.mapper.UserCopyMapperMaria")
+public interface UserCopyMapperMaria {
+
 	public List<UserCopy> selectUserAll() throws Exception;
 	public UserCopy selectUserOne(String id) throws Exception;
 	public void insertUser(UserCopy userCopy) throws Exception;
 	public void updateUser(UserCopy userCopy) throws Exception;
-	public void insertMaria(UserCopy userCopy) throws Exception;
-	
 }

@@ -22,7 +22,7 @@
 	</aop:config>
 	
 	<bean id="txManager.dori" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="datasource.dori"/>
+		<property name="dataSource" ref="datasource.maria"/>
 	</bean>
 	
 </beans>

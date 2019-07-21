@@ -25,6 +25,11 @@
 	  </property>
 	</bean>
 	
+	<bean class="com.github.springtestdbunit.bean.DatabaseDataSourceConnectionFactoryBean">
+		<property name="dataSource" ref="datasource" />
+		<property name="schema" value="mysql3"/>
+	</bean>
+	
 	<bean id="transactionManager"
 	    class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 	  <property name="dataSource" ref="datasource" />

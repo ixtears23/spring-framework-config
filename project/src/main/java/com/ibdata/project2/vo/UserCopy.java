@@ -7,6 +7,7 @@ public class UserCopy {
 	private String emain;
 	private String phone;
 	private String sex;
+	private String age;
 	
 	public UserCopy() {
 		
@@ -51,6 +52,14 @@ public class UserCopy {
 		this.sex = sex;
 	}
 	
+	public String getAge() {
+		return age;
+	}
+
+	public void setAge(String age) {
+		this.age = age;
+	}
+
 	@Override
 	public String toString() {
 		return super.toString();
